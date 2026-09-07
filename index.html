@@ -7,10 +7,12 @@
     <style>
         :root {
             --bg-color: #030812;
+            --card-bg: rgba(13, 22, 38, 0.7);
             --accent-blue: #00d2ff;
             --text-main: #ffffff;
             --text-sub: #7a8b9e;
             --glow-color: rgba(0, 210, 255, 0.25);
+            --border-color: rgba(0, 210, 255, 0.15);
         }
 
         * {
@@ -18,6 +20,7 @@
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -26,88 +29,270 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
+            overflow-x: hidden;
             position: relative;
         }
 
-        /* Tech circuit background effect */
+        /* Tech background glow effect */
         .bg-glow {
             position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, var(--glow-color) 0%, rgba(3,8,18,0) 70%);
-            top: 50%;
+            top: 20%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 1;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--glow-color) 0%, rgba(3, 8, 18, 0) 70%);
+            z-index: -1;
             pointer-events: none;
         }
 
-        .container {
-            text-align: center;
-            z-index: 2;
-            padding: 20px;
+        /* Navigation Bar */
+        header {
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(3, 8, 18, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
-        .brand-title {
-            font-size: 5rem;
-            font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 10px;
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
             color: var(--text-main);
         }
 
-        .brand-title span {
+        .logo-text span {
             color: var(--accent-blue);
         }
 
-        .slogan {
-            font-size: 1.1rem;
-            letter-spacing: 6px;
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
             color: var(--text-sub);
-            text-transform: uppercase;
-            font-weight: 500;
-            margin-bottom: 30px;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
-        .slogan span {
+        nav a:hover {
             color: var(--accent-blue);
-            margin: 0 10px;
         }
 
-        .status-badge {
+        /* Main Container */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+            text-transform: lowercase;
+        }
+
+        h1 span {
+            color: var(--accent-blue);
+            text-shadow: 0 0 25px var(--glow-color);
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: var(--text-sub);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        .badge {
             display: inline-block;
             padding: 8px 18px;
-            border: 1px solid rgba(0, 210, 255, 0.4);
+            border: 1px solid var(--accent-blue);
             border-radius: 20px;
-            background: rgba(0, 210, 255, 0.05);
-            font-size: 0.85rem;
-            letter-spacing: 1px;
             color: var(--accent-blue);
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            background: rgba(0, 210, 255, 0.05);
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.1);
         }
 
-        footer {
-            position: absolute;
-            bottom: 20px;
+        /* News / Blog Section */
+        .section-title {
+            font-size: 2rem;
+            margin: 60px 0 30px 0;
+            text-align: left;
+            width: 100%;
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 15px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 100%;
+            margin-bottom: 60px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .news-date {
             font-size: 0.8rem;
+            color: var(--accent-blue);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .news-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .news-card p {
+            font-size: 0.95rem;
             color: var(--text-sub);
-            z-index: 2;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .news-link {
+            text-decoration: none;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .news-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-sub);
+            font-size: 0.85rem;
+            background: rgba(3, 8, 18, 0.9);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+            nav ul {
+                gap: 15px;
+            }
         }
     </style>
 </head>
 <body>
+
     <div class="bg-glow"></div>
-    
-    <main class="container">
-        <h1 class="brand-title">rdfdsr<span>ff</span></h1>
-        <p class="slogan">IDEAS <span>/</span> TECNOLOGÍA <span>/</span> FUTURO</p>
-        <div class="status-badge">SISTEMA SEGURO Y ACTIVO</div>
+
+    <!-- Navegación -->
+    <header>
+        <div class="logo-text">rdfdsr<span>ff</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#noticias">Publicaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección de Bienvenida / Hero -->
+        <section id="home" class="hero">
+            <h1>rdfdsr<span>ff</span></h1>
+            <div class="subtitle">Ideas / Tecnología / Futuro</div>
+            <div class="badge">Sistema Seguro y Activo</div>
+        </section>
+
+        <!-- Sección de Noticias / Artículos -->
+        <section id="noticias" style="width: 100%;">
+            <h2 class="section-title">Últimas Publicaciones</h2>
+            
+            <div class="news-grid">
+                <!-- Tarjeta de Noticia 1 -->
+                <article class="news-card">
+                    <div>
+                        <div class="news-date">7 de Septiembre, 2026</div>
+                        <h3>Despliegue en la Nube con Máxima Seguridad</h3>
+                        <p>Implementación exitosa de arquitectura estática Jamstack protegida bajo protocolos de cifrado avanzado y control de integridad en Cloudflare.</p>
+                    </div>
+                    <a href="#noticias" class="news-link">Leer más &rarr;</a>
+                </article>
+
+                <!-- Tarjeta de Noticia 2 -->
+                <article class="news-card">
+                    <div>
+                        <div class="news-date">Próximamente</div>
+                        <h3>Innovación y Futuro Digital</h3>
+                        <p>Espacio reservado para futuros proyectos, notas de investigación y artículos sobre tecnología aplicada.</p>
+                    </div>
+                    <a href="#noticias" class="news-link">Próximamente &rarr;</a>
+                </article>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <!-- Pie de página -->
+    <footer id="contacto">
         &copy; 2026 rdfdsrff. Todos los derechos reservados.
     </footer>
+
 </body>
 </html>
