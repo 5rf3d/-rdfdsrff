@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rdfdsrff | Ideas • Tecnología • Futuro</title>
-    <style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>rdfdsrff - Ideas / Tecnología / Futuro</title>
+    <style type="text/css">
         :root {
             --bg-color: #030812;
-            --card-bg: rgba(13, 22, 38, 0.7);
-            --accent-blue: #00d2ff;
-            --accent-red: #ff0055;
-            --accent-fb: #1877f2;
             --text-main: #ffffff;
-            --text-sub: #7a8b9e;
-            --glow-color: rgba(0, 210, 255, 0.25);
-            --border-color: rgba(0, 210, 255, 0.15);
+            --text-sub: #a0aec0;
+            --accent-blue: #00d2ff;
+            --glow-color: rgba(0, 210, 255, 0.15);
+            --card-bg: rgba(13, 22, 38, 0.6);
+            --border-color: rgba(255, 255, 255, 0.1);
+            --accent-fb: #1877f2;
         }
 
         * {
@@ -187,6 +185,13 @@
             line-height: 1.6;
         }
 
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-top: 5px;
+        }
+
         .spec-list {
             list-style-type: none;
             padding: 0;
@@ -198,7 +203,7 @@
             color: var(--text-sub);
             margin-bottom: 6px;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 8px;
         }
 
@@ -264,7 +269,34 @@
             border-color: transparent transparent transparent #ffffff;
         }
 
-        /* Facebook Marketplace Button */
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .btn-amazon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #ff9900, #ffb347);
+            color: #000;
+            font-weight: 700;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: fit-content;
+        }
+
+        .btn-amazon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 153, 0, 0.4);
+        }
+
         .btn-fb-marketplace {
             display: inline-flex;
             align-items: center;
@@ -278,7 +310,6 @@
             text-decoration: none;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             width: fit-content;
-            margin-top: 10px;
         }
 
         .btn-fb-marketplace:hover {
@@ -410,7 +441,7 @@
             border: none;
         }
 
-        /* Footer & Facebook Integration */
+        /* Footer */
         footer {
             width: 100%;
             text-align: center;
@@ -458,7 +489,6 @@
     </style>
 </head>
 <body>
-
     <div class="bg-glow"></div>
 
     <!-- Navegación -->
@@ -489,17 +519,19 @@
 
             <div class="products-container">
                 
-                <!-- Producto 1 -->
+                <!-- Producto 1: CanaKit Raspberry Pi 5 Starter Kit PRO (Actualizado) -->
                 <article class="product-card">
-                    <h3 class="product-title">CanaKit Raspberry Pi 5 Starter Kit PRO — Turbine Black</h3>
+                    <h3 class="product-title">CanaKit Raspberry Pi 5 Starter Kit PRO - Turbine Black (128GB / 8GB RAM)</h3>
+                    <div class="product-price">Precio: $285 (Incluye costos de importación y envío local)</div>
                     <p class="product-desc">
-                        Potencia al máximo tus proyectos con el kit de desarrollo más completo. Ideal para programación, servidores domésticos, emulación de consolas, automatización y computación de alto rendimiento.
+                        ¡Potencia al máximo tus proyectos con el kit de desarrollo más completo! Disponible para entrega inmediata. Ideal para programación, servidores domésticos, emulación de consolas, automatización y computación de alto rendimiento.
                     </p>
                     <ul class="spec-list">
+                        <li><strong>Modelo:</strong> CanaKit Raspberry Pi 5 Starter Kit PRO (Edición Turbine Black)</li>
                         <li><strong>Memoria RAM:</strong> 8 GB LPDDR4X</li>
                         <li><strong>Procesador:</strong> Quad-core 64-bit a 2.4 GHz</li>
-                        <li><strong>Almacenamiento:</strong> Tarjeta Micro SD de 128 GB precargada con Raspberry Pi OS (64-bit) + Lector USB</li>
-                        <li><strong>Incluye:</strong> Gabinete CanaKit Turbine Black con ventilador Low Noise, Disipador Mega Heat Sink, Fuente oficial 45W USB-C PD y 2 cables Micro HDMI a HDMI (4K 60Hz)</li>
+                        <li><strong>Almacenamiento:</strong> Tarjeta Micro SD de 128 GB precargada con Raspberry Pi OS (64-bit) + Lector USB de tarjetas.</li>
+                        <li><strong>¿Qué incluye el kit?:</strong> Raspberry Pi 5 (8GB RAM), Gabinete CanaKit Turbine Black con sistema de ventilación de bajo ruido (Low Noise Bearing System Fan), Disipador de calor de aluminio anodizado negro (Mega Heat Sink), Fuente de poder oficial CanaKit de 45W USB-C Power Delivery (PD), 2 cables Micro HDMI a HDMI de 6 pies (soporta doble pantalla hasta 4K a 60Hz).</li>
                     </ul>
 
                     <div>
@@ -509,7 +541,7 @@
                                 <img src="https://img.youtube.com/vi/YsAm5lHBX4k/hqdefault.jpg" alt="Unboxing CanaKit Raspberry Pi 5">
                                 <div class="yt-play-btn"></div>
                             </a>
-                            <a href="https://www.youtube.com/live/Mw8FGBm5HWM" target="_blank" class="yt-preview-card">
+                            <a href="https://www.youtube.com/live/Mw8FGBm5HWM?si=kxKlxWHhCTMIt5RS" target="_blank" class="yt-preview-card">
                                 <img src="https://img.youtube.com/vi/Mw8FGBm5HWM/hqdefault.jpg" alt="Comunicación Raspberry Pi 5 y Brazo Robótico">
                                 <div class="yt-play-btn"></div>
                             </a>
@@ -520,52 +552,85 @@
                         </div>
                     </div>
 
-                    <a href="https://www.facebook.com/marketplace/you/selling/" target="_blank" class="btn-fb-marketplace">
-                        Ver publicación en Facebook Marketplace &rarr;
-                    </a>
+                    <div class="btn-group">
+                        <a href="https://www.facebook.com/marketplace/profile/61593824411179" target="_blank" class="btn-fb-marketplace">
+                            Ver publicación en Marketplace &rarr;
+                        </a>
+                        <a href="https://amzn.to/46hcYkD" target="_blank" class="btn-amazon">
+                            Ver producto en Amazon &rarr;
+                        </a>
+                    </div>
                 </article>
 
-                <!-- Producto 2 -->
+                <!-- Producto 2: DJI RC 2 -->
                 <article class="product-card">
-                    <h3 class="product-title">Raspberry Pi 5 — 8GB RAM (Modelo SC1112)</h3>
+                    <h3 class="product-title">DJI RC 2: Control inteligente con pantalla integrada</h3>
                     <p class="product-desc">
-                        Lleva tus proyectos de programación, automatización y laboratorios en casa al siguiente nivel con la última generación de la placa de desarrollo más popular del mundo. Perfecta para entusiastas y creadores de contenido digital.
+                        Vuela sin depender de tu smartphone con el DJI RC 2. Su pantalla FHD de 5,5 pulgadas y 700 nits ofrece una visualización clara y nítida para encuadrar tus tomas durante el día, mientras que la transmisión DJI O4 y el sistema de antenas 2T4R proporcionan vídeo HD de baja latencia y un alcance máximo de hasta 20 km con drones compatibles. El procesador mejorado de 6 nm mantiene la interfaz rápida y fluida, permitiéndote ajustar parámetros, consultar mapas y controlar la cámara con máxima comodidad. Ideal para pilotos que buscan una experiencia de vuelo rápida, ordenada y profesional, completamente libre de cables y distracciones telefónicas.
                     </p>
                     <ul class="spec-list">
-                        <li><strong>Procesador:</strong> Quad-core ARM Cortex-A76 de 64 bits a 2.4 GHz</li>
-                        <li><strong>Memoria RAM:</strong> 8 GB LPDDR4X</li>
-                        <li><strong>Conectividad:</strong> Puertos micro HDMI duales (4K), USB 3.0 de alta velocidad y puerto USB-C</li>
-                        <li><strong>Expansión PCIe:</strong> Conector FPC integrado compatible con adaptadores SSD M.2 NVMe</li>
+                        <li><strong>Batería:</strong> 22,32 Wh, equivalente a 6.200 mAh totales (configurada en dos celdas de 3.100 mAh a 3,6 V cada una).</li>
+                        <li><strong>Autonomía máxima:</strong> Hasta 3 horas de funcionamiento continuo, sujeta a variaciones según las condiciones de uso.</li>
+                        <li><strong>Carga completa:</strong> Aproximadamente 1 hora y 30 minutos empleando un cargador USB compatible de 9 V / 3 A.</li>
+                        <li><strong>Almacenamiento interno:</strong> 32 GB nativos, con ranura de expansión compatible con tarjetas microSD.</li>
+                        <li><strong>Carga rápida:</strong> Soporta hasta 9 V / 3 A mediante puerto USB-C.</li>
+                        <li><strong>Beneficios Prácticos:</strong> Transmisión DJI O4 y Antenas 2T4R, Independencia del smartphone y Diseño Integrado (all-in-one) de aproximadamente 420 g con DJI Fly preinstalado.</li>
                     </ul>
 
                     <div>
                         <h4 style="font-size: 0.9rem; color: var(--accent-blue); margin-bottom: 10px;">Reseñas & Tutoriales en Video:</h4>
                         <div class="yt-grid">
-                            <a href="https://youtu.be/nBtOEmUqASQ" target="_blank" class="yt-preview-card">
-                                <img src="https://img.youtube.com/vi/nBtOEmUqASQ/hqdefault.jpg" alt="Raspberry Pi 5 Everything You Need To Know">
+                            <a href="https://youtu.be/kCMPhBCx1kY" target="_blank" class="yt-preview-card">
+                                <img src="https://img.youtube.com/vi/kCMPhBCx1kY/hqdefault.jpg" alt="DJI RC 2 Remote Controller">
                                 <div class="yt-play-btn"></div>
                             </a>
-                            <a href="https://youtu.be/UBQosbjl9Jw" target="_blank" class="yt-preview-card">
-                                <img src="https://img.youtube.com/vi/UBQosbjl9Jw/hqdefault.jpg" alt="Can Raspberry Pi 5 Replace Your Desktop PC">
-                                <div class="yt-play-btn"></div>
-                            </a>
-                            <a href="https://youtu.be/arvCnhpfE-c" target="_blank" class="yt-preview-card">
-                                <img src="https://img.youtube.com/vi/arvCnhpfE-c/hqdefault.jpg" alt="El Mini Ordenador Más Famoso del Mundo">
-                                <div class="yt-play-btn"></div>
-                            </a>
-                            <a href="https://youtu.be/OzwLGzgFhss" target="_blank" class="yt-preview-card">
-                                <img src="https://img.youtube.com/vi/OzwLGzgFhss/hqdefault.jpg" alt="Lo que debes saber sobre Raspberry Pi 5 Review">
+                            <a href="https://youtu.be/K63kL0fGSZU" target="_blank" class="yt-preview-card">
+                                <img src="https://img.youtube.com/vi/K63kL0fGSZU/hqdefault.jpg" alt="DJI RC2 EL CONTROL DEFINITIVO">
                                 <div class="yt-play-btn"></div>
                             </a>
                         </div>
                     </div>
 
-                    <a href="https://www.facebook.com/marketplace/you/selling/" target="_blank" class="btn-fb-marketplace">
-                        Ver publicación en Facebook Marketplace &rarr;
-                    </a>
+                    <div class="btn-group">
+                        <a href="https://www.facebook.com/marketplace/profile/61593824411179" target="_blank" class="btn-fb-marketplace">
+                            Ver publicación en Marketplace &rarr;
+                        </a>
+                    </div>
                 </article>
 
-                <!-- Producto 3 -->
+                <!-- Producto 3: Lenovo Legion Pro 7i Gen 10 -->
+                <article class="product-card">
+                    <h3 class="product-title">Lenovo Legion Pro 7i Gen 10 (16" OLED 2.6K 240Hz) – Intel Core Ultra 9 275HX | NVIDIA RTX 5080</h3>
+                    <p class="product-desc">
+                        La Lenovo Legion Pro 7i Gen 10 está concebida como una estación de trabajo móvil de grado entusiasta y profesional. A diferencia de ordenadores portátiles ultra-delgados que sufren caídas de rendimiento por acumulación de calor, la Legion Pro 7i utiliza un chasis de 21.9 mm a 26.65 mm que provee el volumen interno necesario para evacuar la energía térmica de sus componentes de alta potencia, garantizando un rendimiento multinúcleo sostenido.
+                    </p>
+                    <ul class="spec-list">
+                        <li><strong>RENDIMIENTO GRÁFICO SIN RESTRICCIONES (175W TGP):</strong> Incorpora la GPU NVIDIA GeForce RTX 5080 Laptop operando a su máximo TGP nominal de 175W. Diseñada para cómputo masivo de Inteligencia Artificial y Ray Tracing.</li>
+                        <li><strong>PROCESADOR INTEL CORE ULTRA 9 275HX:</strong> Arquitectura de alto rendimiento con sistema de refrigeración Lenovo ColdFront con metal líquido y cámara de vapor, manteniendo temperaturas sostenidas por debajo de 95°C.</li>
+                        <li><strong>PANTALLA OLED WQXGA (2560x1600) A 240Hz:</strong> Panel profesional de 16 pulgadas con certificación DisplayHDR True Black 1000, 500 nits y cobertura cromática 100% DCI-P3.</li>
+                        <li><strong>CONFIGURACIÓN OPTIMIZADA:</strong> 64GB de memoria RAM DDR5 en doble canal y SSD NVMe PCIe de 2TB de ultra alta velocidad.</li>
+                        <li><strong>CONECTIVIDAD COMPLETA:</strong> Wi-Fi 7, Bluetooth 5.4, Ethernet Gigabit RJ-45, HDMI 2.1, puertos USB-C con soporte Power Delivery / DisplayPort.</li>
+                        <li><strong>TRANSPARENCIA DE ORIGEN:</strong> Unidad con configuración personalizada realizada por el especialista Black Tech LLC. Incluye 1 año de garantía en el SSD y 1 año de Garantía Premium Lenovo en el resto del equipo.</li>
+                    </ul>
+
+                    <div>
+                        <h4 style="font-size: 0.9rem; color: var(--accent-blue); margin-bottom: 10px;">Reseñas & Pruebas Térmicas:</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-sub); margin-bottom: 15px;">
+                            📺 Búscalo en YouTube como: <strong>"Legion Pro 7i Gen 10 Review - RTX 5080 and Intel 275HX Gaming Monster"</strong>
+                        </p>
+                    </div>
+
+                    <div class="btn-group">
+                        <a href="https://www.facebook.com/marketplace/profile/61593824411179" target="_blank" class="btn-fb-marketplace">
+                            Ver publicación en Marketplace &rarr;
+                        </a>
+                        <a href="https://amzn.to/4r9bSkp" target="_blank" class="btn-amazon">
+                            Ver producto en Amazon &rarr;
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Producto 4: Nooelec RTL-SDR v5 Bundle (Mantenido del original) -->
                 <article class="product-card">
                     <h3 class="product-title">Nooelec RTL-SDR v5 Bundle — Radio Definida por Software</h3>
                     <p class="product-desc">
@@ -600,9 +665,11 @@
                         </div>
                     </div>
 
-                    <a href="https://www.facebook.com/marketplace/you/selling/" target="_blank" class="btn-fb-marketplace">
-                        Ver publicación en Facebook Marketplace &rarr;
-                    </a>
+                    <div class="btn-group">
+                        <a href="https://amzn.to/4xiB89v" target="_blank" class="btn-amazon">
+                            Ver producto en Amazon &rarr;
+                        </a>
+                    </div>
                 </article>
 
             </div>
@@ -657,7 +724,7 @@
 
     <!-- Pie de página y Redes Sociales -->
     <footer id="contacto">
-        <div>Síguenos y conéctate en nuestra página de Facebook:</div>
+        <div>Síguenos y conéctate en nuestras redes sociales:</div>
         <a href="https://www.facebook.com/profile.php?id=61593824411179" target="_blank" class="fb-link">
             <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             Perfil Oficial en Facebook
